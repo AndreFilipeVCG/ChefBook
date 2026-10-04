@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefBook — Nova Receita</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ChefBook</h1>
+    <p>Suas receitas, do seu jeito</p>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Meu Catálogo</a></li>
+        <li><a href="cadastro.html" aria-current="page">Nova Receita</a></li>
+        <li><a href="buscar.html">Buscar Receitas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Cadastrar receita</h2>
+      <p>Preencha as informações abaixo. Esta mesma tela também será usada para editar uma receita.</p>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Informações gerais</legend>
+
+          <label for="nome">Nome da receita</label>
+          <input type="text" id="nome" name="nome" required maxlength="100" placeholder="Ex.: Bolo de Cenoura">
+
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option value="prato-principal">Prato principal</option>
+            <option value="sobremesa">Sobremesa</option>
+            <option value="lanche">Lanche</option>
+            <option value="cafe-da-manha">Café da manhã</option>
+            <option value="bebida">Bebida</option>
+          </select>
+
+          <label for="tempo">Tempo de preparo (minutos)</label>
+          <input type="number" id="tempo" name="tempo" min="1" max="1440" required>
+
+          <label for="porcoes">Porções</label>
+          <input type="number" id="porcoes" name="porcoes" min="1" max="50" required>
+
+          <label for="imagem">Link da imagem</label>
+          <input type="url" id="imagem" name="imagem" placeholder="https://...">
+        </fieldset>
+
+        <fieldset>
+          <legend>Dificuldade</legend>
+
+          <input type="radio" id="dif-facil" name="dificuldade" value="facil" checked>
+          <label for="dif-facil">Fácil</label>
+
+          <input type="radio" id="dif-media" name="dificuldade" value="media">
+          <label for="dif-media">Média</label>
+
+          <input type="radio" id="dif-dificil" name="dificuldade" value="dificil">
+          <label for="dif-dificil">Difícil</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ingredientes e preparo</legend>
+
+          <label for="ingredientes">Ingredientes (um por linha)</label>
+          <textarea id="ingredientes" name="ingredientes" rows="6" required placeholder="3 cenouras médias&#10;3 ovos&#10;2 xícaras de farinha de trigo"></textarea>
+
+          <label for="preparo">Modo de preparo (um passo por linha)</label>
+          <textarea id="preparo" name="preparo" rows="8" required placeholder="Bata no liquidificador a cenoura, os ovos e o óleo.&#10;Misture a farinha e o açúcar.&#10;Asse por 40 minutos."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Avaliação</legend>
+
+          <label for="nota">Nota (1 a 5)</label>
+          <input type="number" id="nota" name="nota" min="1" max="5">
+
+          <label for="favorita">
+            <input type="checkbox" id="favorita" name="favorita">
+            Marcar como favorita
+          </label>
+        </fieldset>
+
+        <button type="submit">Salvar receita</button>
+        <button type="reset">Limpar</button>
+        <a href="../index.html">Cancelar</a>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>ChefBook — Trabalho Prático Individual · Engenharia de Software · PUC Minas</p>
+    <p>André Filipe Vaz De Carvalhaes Gonzaga · 2026</p>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
