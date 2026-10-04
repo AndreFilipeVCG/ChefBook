@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefBook — Meu Catálogo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ChefBook</h1>
+    <p>Suas receitas, do seu jeito</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Meu Catálogo</a></li>
+        <li><a href="pages/cadastro.html">Nova Receita</a></li>
+        <li><a href="pages/buscar.html">Buscar Receitas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <aside>
+      <h2>Pesquisar e organizar</h2>
+
+      <form>
+        <section>
+          <h3>Pesquisa</h3>
+          <label for="pesquisa">Nome ou ingrediente</label>
+          <input type="search" id="pesquisa" name="pesquisa" placeholder="Ex.: bolo, frango, queijo">
+        </section>
+
+        <section>
+          <h3>Filtros</h3>
+
+          <label for="filtro-categoria">Categoria</label>
+          <select id="filtro-categoria" name="categoria">
+            <option value="">Todas</option>
+            <option value="prato-principal">Prato principal</option>
+            <option value="sobremesa">Sobremesa</option>
+            <option value="lanche">Lanche</option>
+            <option value="cafe-da-manha">Café da manhã</option>
+            <option value="bebida">Bebida</option>
+          </select>
+
+          <label for="filtro-dificuldade">Dificuldade</label>
+          <select id="filtro-dificuldade" name="dificuldade">
+            <option value="">Todas</option>
+            <option value="facil">Fácil</option>
+            <option value="media">Média</option>
+            <option value="dificil">Difícil</option>
+          </select>
+
+          <label for="filtro-favoritas">
+            <input type="checkbox" id="filtro-favoritas" name="favoritas">
+            Somente favoritas
+          </label>
+        </section>
+
+        <section>
+          <h3>Ordenação</h3>
+          <label for="ordenacao">Ordenar por</label>
+          <select id="ordenacao" name="ordenacao">
+            <option value="nome-asc">Nome (A–Z)</option>
+            <option value="nome-desc">Nome (Z–A)</option>
+            <option value="tempo-asc">Menor tempo de preparo</option>
+            <option value="tempo-desc">Maior tempo de preparo</option>
+            <option value="nota-desc">Melhor nota</option>
+          </select>
+        </section>
+
+        <button type="submit">Aplicar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </aside>
+
+    <section>
+      <h2>Minhas receitas</h2>
+      <p>4 receitas encontradas</p>
+
+      <article>
+        <img src="assets/img/bolo-de-cenoura.jpg" alt="Bolo de cenoura com cobertura de chocolate">
+        <h3>Bolo de Cenoura</h3>
+        <ul>
+          <li>Categoria: Sobremesa</li>
+          <li>Tempo de preparo: 50 min</li>
+          <li>Dificuldade: Fácil</li>
+          <li>Nota: 5/5</li>
+          <li>Favorita</li>
+        </ul>
+        <a href="pages/receita.html">Ver detalhes</a>
+        <a href="pages/cadastro.html">Editar</a>
+        <button type="button">Excluir</button>
+      </article>
+
+      <article>
+        <img src="assets/img/strogonoff.jpg" alt="Strogonoff de frango servido com arroz">
+        <h3>Strogonoff de Frango</h3>
+        <ul>
+          <li>Categoria: Prato principal</li>
+          <li>Tempo de preparo: 40 min</li>
+          <li>Dificuldade: Média</li>
+          <li>Nota: 4/5</li>
+        </ul>
+        <a href="pages/receita.html">Ver detalhes</a>
+        <a href="pages/cadastro.html">Editar</a>
+        <button type="button">Excluir</button>
+      </article>
+
+      <article>
+        <img src="assets/img/pao-de-queijo.jpg" alt="Pães de queijo assados">
+        <h3>Pão de Queijo</h3>
+        <ul>
+          <li>Categoria: Lanche</li>
+          <li>Tempo de preparo: 35 min</li>
+          <li>Dificuldade: Fácil</li>
+          <li>Nota: 5/5</li>
+          <li>Favorita</li>
+        </ul>
+        <a href="pages/receita.html">Ver detalhes</a>
+        <a href="pages/cadastro.html">Editar</a>
+        <button type="button">Excluir</button>
+      </article>
+
+      <article>
+        <img src="assets/img/panqueca.jpg" alt="Panquecas empilhadas com mel">
+        <h3>Panqueca Americana</h3>
+        <ul>
+          <li>Categoria: Café da manhã</li>
+          <li>Tempo de preparo: 20 min</li>
+          <li>Dificuldade: Fácil</li>
+          <li>Nota: 3/5</li>
+        </ul>
+        <a href="pages/receita.html">Ver detalhes</a>
+        <a href="pages/cadastro.html">Editar</a>
+        <button type="button">Excluir</button>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>ChefBook — Trabalho Prático Individual · Engenharia de Software · PUC Minas</p>
+    <p>André Filipe Vaz De Carvalhaes Gonzaga · 2026</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
