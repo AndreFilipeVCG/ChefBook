@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefBook — Buscar Receitas</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ChefBook</h1>
+    <p>Suas receitas, do seu jeito</p>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Meu Catálogo</a></li>
+        <li><a href="cadastro.html">Nova Receita</a></li>
+        <li><a href="buscar.html" aria-current="page">Buscar Receitas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Buscar receitas na internet</h2>
+      <p>Encontre receitas prontas pela API Spoonacular e importe para o seu catálogo.</p>
+
+      <form action="#" method="get">
+        <label for="busca">Nome da receita ou ingrediente (em inglês)</label>
+        <input type="search" id="busca" name="busca" placeholder="Ex.: lasagna, chicken, chocolate" required>
+
+        <label for="busca-tipo">Tipo de prato</label>
+        <select id="busca-tipo" name="tipo">
+          <option value="">Qualquer</option>
+          <option value="main course">Prato principal</option>
+          <option value="dessert">Sobremesa</option>
+          <option value="breakfast">Café da manhã</option>
+          <option value="snack">Lanche</option>
+          <option value="beverage">Bebida</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Resultados</h2>
+      <p>2 receitas encontradas para "lasagna"</p>
+
+      <article>
+        <img src="../assets/img/lasanha.jpg" alt="Lasanha à bolonhesa">
+        <h3>Classic Lasagna</h3>
+        <ul>
+          <li>Tempo de preparo: 75 min</li>
+          <li>Porções: 6</li>
+        </ul>
+        <button type="button">Importar para o catálogo</button>
+      </article>
+
+      <article>
+        <img src="../assets/img/brownie.jpg" alt="Brownie de chocolate">
+        <h3>Chocolate Brownie</h3>
+        <ul>
+          <li>Tempo de preparo: 45 min</li>
+          <li>Porções: 8</li>
+        </ul>
+        <button type="button">Importar para o catálogo</button>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>ChefBook — Trabalho Prático Individual · Engenharia de Software · PUC Minas</p>
+    <p>André Filipe Vaz De Carvalhaes Gonzaga · 2026</p>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
